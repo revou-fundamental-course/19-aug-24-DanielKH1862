@@ -169,12 +169,12 @@ h1 {
     font-weight: bold;
 }
 
-.language-container {
+.profile-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.sel-language-container {
+.sel-profile-container {
     display: flex;
     text-indent: 55px;
 }
@@ -182,7 +182,7 @@ h1 {
     display: flex;
     text-indent: 55px;
 }
-.language-item {
+.profile-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,7 +194,7 @@ h1 {
     color: #333;*/
 }
 
-.language-img {
+.profile-img {
     border: 1px solid #000;
     height: 50px;
     width: 50px;
@@ -395,45 +395,30 @@ color: white;
         transform: translate(5px, -35px) scale(0.6);
       }
       
-      
-      form .question input[type="date"] {
-        appearance: none;
-        background-color: none;
-        border: 1px solid #000;
-        line-height: 0;
-        font-size: 17px;
-        width: 100%;
-        display: block;
-        box-sizing: border-box;
-        padding: 10px 15px;
-        border-radius: 60px;
-        color: #000;
-        font-weight: 100;
-        letter-spacing: 0.01em;
-        position: relative;
-        z-index: 1;
-      }
-      form .question input[type="date"]:focus {
-        outline: none;
-        background: #000;
-        color: white;
-        margin-top: 30px;
-      }
-      form .question input[type="date"]:valid {
-        margin-top: 30px;
-      }
-      form .question input[type="date"]:focus ~ label {
-        -moz-transform: translate(0, -35px);
-        -ms-transform: translate(0, -35px);
-        -webkit-transform: translate(0, -35px);
-        transform: translate(0, -35px);
-      }
-      form .question input[type="date"]:valid ~ label {
-        text-transform: uppercase;
-        font-style: italic;
-        -moz-transform: translate(5px, -35px) scale(0.6);
-        -ms-transform: translate(5px, -35px) scale(0.6);
-        -webkit-transform: translate(5px, -35px) scale(0.6);
-        transform: translate(5px, -35px) scale(0.6);
-      }
-      
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+input[type="date"]{
+    background-color: #0080ff;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
